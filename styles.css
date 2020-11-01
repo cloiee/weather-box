@@ -1,0 +1,133 @@
+body {
+  font-family: arial, sans-serif;
+}
+
+.weather-box {
+  border: 1px solid #ececed;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 670px;
+  background-image: linear-gradient(to top, #81c7c7 0%, #330867 100%);
+}
+
+h1 {
+  color: whitesmoke;
+  font-family: Elsie;
+  font-weight: 700;
+  text-align: center;
+  font-size: 37px;
+  line-height: 100px;
+  margin: 0;
+}
+
+h2 {
+  color: whitesmoke;
+  font-family: Elsie;
+  font-weight: 700;
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+
+ul {
+  margin: 0 0 20px;
+  padding: 100 100;
+}
+
+li {
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: elsie;
+  height: 19px;
+  line-height: 1;
+  list-style: none;
+}
+
+.search-place {
+  margin-bottom: 10px;
+  font-family: elsie;
+  width: calc(100% - 300px);
+  position: relative;
+  right: -180px;
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+}
+
+button :hover {
+  cursor: wait;
+}
+
+.fa-search {
+  color: silver;
+}
+
+.fa-search-location {
+  color: silver;
+}
+
+.date-time {
+  position: relative;
+  right: 40px;
+  font-size: 23px;
+}
+
+.description {
+  position: relative;
+  right: 40px;
+  font-size: 28px;
+}
+
+.temperature {
+  color: seashell;
+  font-size: 58px;
+  line-height: 1;
+  font-family: Elsie;
+  font-weight: 700;
+  position: relative;
+  right: -310px;
+}
+
+.units {
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+  color: lavender;
+  position: relative;
+  right: -310px;
+  font-family: elsie;
+  font-size: 30px;
+}
+
+units :hover {
+  cursor: default;
+  color: seashell;
+}
+
+.conditions {
+  color: seashell;
+  font-family: elsie;
+  position: relative;
+  right: -290px;
+  top: -60px;
+}
+
+.col-sm {
+  color: seashell;
+  font-family: elsie;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  right: -20px;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  width: 570px;
+  position: relative;
+  right: -45px;
+}

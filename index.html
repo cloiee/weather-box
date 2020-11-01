@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/df4c8fcef2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Weather Box</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather-box">
+        <h1>W e a t h e r</h1>
+
+        <h2 id="city">. . .</h2>
+
+        <br />
+
+        <form class="search-place" id="search-place">
+          <div class="row">
+            <div class="col-7">
+              <input
+                type="search"
+                placeholder="Type a city location"
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control"
+              />
+            </div>
+            <button type="button" id="city-search">
+              <i class="fas fa-search"></i>
+            </button>
+            &nbsp &nbsp
+            <button type="button" id="location-search">
+              <i class="fas fa-search-location"></i>
+            </button>
+          </div>
+        </form>
+
+        <br />
+
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <span class="temperature" id="temp"></span
+              ><span class="units"> °C </span>
+
+              <div style="float: right">
+                <ul>
+                  <li class="date-time" id="date"></li>
+                  &nbsp
+                  <li class="description" id="description"></li>
+
+                  <li class="conditions" id="humidity">Humidity: %</li>
+                  <li class="conditions" id="wind">Wind: km/h</li>
+                  <li class="conditions" id="sunrise">Sunrise:</li>
+                  <li class="conditions" id="sunset">Sunset:</li>
+                </ul>
+              </div>
+              <br />
+              <div class="row" style="width: 40rem">
+                <div class="col-sm">Monday <br />7°C</div>
+                <div class="col-sm">Tuesday<br />5°C</div>
+                <div class="col-sm">Wednesday<br />3°C</div>
+                <div class="col-sm">Thursday<br />-1°C</div>
+                <div class="col-sm">Friday<br />2°C</div>
+                <br />
+                <br />
+                <div class="clearfix">
+                  <img
+                    src="file:///Users/V/Downloads/undraw_season_change_f99v%20(1).svg"
+                    alt="Season"
+                    class="season-icon"
+                  />
+                  <div class="float-left"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
