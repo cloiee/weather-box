@@ -80,7 +80,7 @@ function getLocation() {
 }
 
 let searchForm = document.querySelector("#city-search");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("click", search);
 
 let currentLocationButton = document.querySelector("#location-search");
 currentLocationButton.addEventListener("click", getLocation);
