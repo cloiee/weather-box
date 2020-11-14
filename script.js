@@ -45,6 +45,9 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-place");
 form.addEventListener("submit", handleSubmit);
 
+let searchForm = document.querySelector("#city-search");
+searchForm.addEventListener("click", handleSubmit);
+
 function displayWeather(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
@@ -68,7 +71,8 @@ function displayWeather(response) {
     response.data.weather[0].main;
 }
 
-function showCurrentPosition(position) {
+function retrievePosition(position) {
+  let apiKey = "19528f2e11cf229686aeedd6a8df66ad";
   let lon = position.coords.longitude;
   let lat = position.coords.latitude;
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}&units=metric`;
@@ -76,11 +80,8 @@ function showCurrentPosition(position) {
 }
 
 function getLocation() {
-  navigator.geolocation.getCurrentPosition(showCurrentPosition);
+  navigator.geolocation.getCurrentPosition(retrievePosition);
 }
-
-let searchForm = document.querySelector("#city-search");
-searchForm.addEventListener("click", search);
 
 let currentLocationButton = document.querySelector("#location-search");
 currentLocationButton.addEventListener("click", getLocation);
