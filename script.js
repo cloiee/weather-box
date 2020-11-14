@@ -55,6 +55,13 @@ function displayWeather(response) {
     response.data.main.temp
   );
 
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
   let windSpeed = document.querySelector("#wind");
   windSpeed.innerHTML = `Wind: ${response.data.wind.speed} km/h`;
 
@@ -68,7 +75,7 @@ function displayWeather(response) {
   sunset.innerHTML = `Sunset: ${response.data.sys.sunset}`;
 
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 }
 
 function retrievePosition(position) {
