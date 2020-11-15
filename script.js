@@ -96,4 +96,14 @@ function getLocation() {
 let currentLocationButton = document.querySelector("#location-search");
 currentLocationButton.addEventListener("click", getLocation);
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (11 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = fahrenheitTemperature;
+}
+
 search("copenhagen");
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
