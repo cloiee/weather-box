@@ -57,24 +57,27 @@
 
         <br />
 
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
+        <div class="row" class="col-8">
+            <ul class="info">
+              <li class="date-time" id="date"></li>
+              <li class="description" id="description"></li>
+            </ul>
+
+            <div class="row" class="col-8">
               <span class="temperature" id="temp"></span
-              ><span class="units"> °C </span>
+              ><span class="units"> °C | <a href="#">°F</a></span>
 
-              <div style="float: right">
-                <ul>
-                  <li class="date-time" id="date"></li>
-                  &nbsp
-                  <li class="description" id="description"></li>
-
-                  <li class="conditions" id="humidity">Humidity: %</li>
-                  <li class="conditions" id="wind">Wind: km/h</li>
-                  <li class="conditions" id="sunrise">Sunrise:</li>
-                  <li class="conditions" id="sunset">Sunset:</li>
+              <div class="row" class="col-8">
+                <ul class="conditions">
+                  <li id="humidity">Humidity:</li>
+                  <li id="wind">Wind:</li>
+                  <li id="sunrise">Sunrise:</li>
+                  <li id="sunset">Sunset:</li>
                 </ul>
               </div>
+            </div>
+          </div>
+
               <br />
               <div class="row" style="width: 40rem">
                 <div class="col-sm">
