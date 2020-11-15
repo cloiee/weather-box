@@ -93,4 +93,4 @@ function getLocation() {
 let currentLocationButton = document.querySelector("#location-search");
 currentLocationButton.addEventListener("click", getLocation);
 
-search("seoul");
+search("copenhagen");
