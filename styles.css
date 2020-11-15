@@ -136,3 +136,10 @@ h5 {
   text-align: center;
   font-size: 12px;
 }
+
+.weather-box-wrapper {
+  margin-bottom: 10px;
+}
+.link {
+  color: rgb(134, 180, 180);
+}
