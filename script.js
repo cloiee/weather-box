@@ -62,6 +62,9 @@ function displayWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+  let precipitation = document.querySelector("#precipitation");
+  precipitation.innerHTML = `Precipitation: ${response.data.main.precipitation}`;
+
   let windSpeed = document.querySelector("#wind");
   windSpeed.innerHTML = `Wind: ${response.data.wind.speed} km/h`;
 
