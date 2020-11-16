@@ -60,14 +60,16 @@
 
         <div class="row" class="col-8">
             <ul class="info">
+              <li class="description" id="description"></li>
               <li class="date-time" id="date"></li>
               <li class="description" id="description"></li>
             </ul>
 
             <div class="row" class="col-8">
               <span class="temp" id="temperature"></span
-              ><span class="units"> °C | <a href="#" id="fahrenheit-link">°F</a></span>
-
+              ><span class="units"> <a href="#" id="celcius-link" class="active">°C</a> |
+                <a href="#" id="fahrenheit-link" class="change">°F</a></span
+              >
               <div class="row" class="col-8">
                 <ul class="conditions">
                    <li id="precipitation">Precipitation:</li>
