@@ -139,8 +139,7 @@ units :hover {
   display: block;
   margin: 0 auto;
   width: 570px;
-  position: relative;
-  right: -45px;
+  margin-left: 50px;
 }
 
 h5 {
