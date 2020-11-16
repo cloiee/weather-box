@@ -92,18 +92,18 @@ button :hover {
   margin-left: 60px;
   position: relative;
 }
+
 .active {
   color: whitesmoke;
   cursor: default;
-  text-decoration: none;
 }
 .active:hover {
   text-decoration: none;
-}
-.change {
-  color: whitesmoke;
   cursor: default;
+}
+.change:hover {
   text-decoration: none;
+  cursor: default;
 }
 
 .units {

@@ -38,7 +38,6 @@ function formatDate(timestamp) {
   }
   return `${day} ${hours}:${minutes} ${month}`;
 }
-//update search city
 
 function search(city) {
   let apiKey = "19528f2e11cf229686aeedd6a8df66ad";
@@ -67,6 +66,8 @@ function displayWeather(response) {
 
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
+
+  celciusTemperature = response.data.main.temp;
 
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
@@ -114,12 +115,24 @@ currentLocationButton.addEventListener("click", getLocation);
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (11 * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = fahrenheitTemperature;
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-
-search("copenhagen");
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+let celciusTemperature = null;
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", displayCelciusTemperature);
+search("copenhagen");
