@@ -70,17 +70,15 @@ button :hover {
   color: whitesmoke;
   font-family: elsie;
   font-weight: bold;
-  right: 40px;
-  font-size: 23px;
+  font-size: 18px;
   margin-left: 10px;
-  margin-right: 70px;
+  margin-right: 25px;
 }
 
 .description {
   color: whitesmoke;
   font-family: elsie;
   font-weight: bold;
-
   font-size: 28px;
   margin-left: 10px;
   margin-right: 10px;
@@ -96,10 +94,11 @@ button :hover {
 }
 
 .units {
+  color: whitesmoke;
   font-family: elsie;
-  color: lavender;
   font-size: 16px;
-  margin-right: 50px;
+  margin-right: 30px;
+  margin-top: 20px;
 }
 
 units :hover {
