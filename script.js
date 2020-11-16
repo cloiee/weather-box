@@ -69,8 +69,8 @@ function displayWeather(response) {
   let precipitation = document.querySelector("#precipitation");
   precipitation.innerHTML = `Precipitation: ${response.data.main.precipitation}`;
 
-  let windSpeed = document.querySelector("#wind");
-  windSpeed.innerHTML = `Wind: ${response.data.wind.speed} km/h`;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
 
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
