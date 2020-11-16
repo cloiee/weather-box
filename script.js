@@ -50,10 +50,13 @@ searchForm.addEventListener("click", handleSubmit);
 
 function displayWeather(response) {
   console.log(response.data);
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
@@ -76,11 +79,6 @@ function displayWeather(response) {
 
   let sunset = document.querySelector("#sunset");
   sunset.innerHTML = `Sunset: ${response.data.sys.sunset}`;
-
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
-
-  celciusTemperature = response.data.main.temp;
 }
 
 function retrievePosition(position) {
