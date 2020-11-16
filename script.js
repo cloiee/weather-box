@@ -61,8 +61,6 @@ let searchForm = document.querySelector("#city-search");
 searchForm.addEventListener("click", handleSubmit);
 
 function displayWeather(response) {
-  console.log(response.data);
-
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();
   dateElement.innerHTML = formatDate(currentTime);
