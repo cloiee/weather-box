@@ -48,10 +48,10 @@ function search(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInput = document.querySelector("#city-input").value;
+  let cityInputElement = document.querySelector("#city-input");
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = cityInput;
-  search(cityInput);
+  cityElement.innerHTML = cityInputElement;
+  search(cityInputElement.value);
 }
 
 let form = document.querySelector("#search-place");
